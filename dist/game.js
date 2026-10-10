@@ -101,3 +101,20 @@ canvas.addEventListener('pointerup',()=>{if(!drag)return;drag=null;save();render
 setInterval(()=>{simulate(1);$('clean').textContent=Math.round(tank().clean);$('income').textContent=Math.floor(tank().bank)+' disponibles'},1000);setInterval(save,10000);window.addEventListener('pagehide',save);render();save();requestAnimationFrame(draw);
 
 
+
+window.aquariumGame.reserve=()=> (state.expeditionFish||[]).filter(r=>['fang','royal'].includes(r.species)).map(r=>({...r,name:species(r.species).name,src:FISH_ASSETS[r.species].src}));
+window.aquariumGame.receiveFish=(id,index)=>{if(gamePaused||!Number.isInteger(index)||!state.tanks[index])return false;const t=state.tanks[index],i=(state.expeditionFish||[]).findIndex(r=>r.id===id&&['fang','royal'].includes(r.species));if(i<0)return false;if(t.fish.length>=8+t.size*4){toast('Ese acuario está lleno. Tu pez sigue seguro en la reserva.');return false}const r=state.expeditionFish.splice(i,1)[0];t.fish.push(fish(r.species));save();render();toast('¡Tu pez de expedición llegó al acuario!');return true};
+// Vista independiente: jamás sustituye la partida propia ni ejecuta sus controles.
+window.aquariumGame.drawVisit=(surface,incoming,time)=>{
+ const c=surface.getContext('2d'),w=surface.width,h=surface.height;
+ const number=(x,d=0)=>Number.isFinite(Number(x))?Number(x):d;
+ const clamp=(x,a,b,d=a)=>Math.max(a,Math.min(b,number(x,d)));
+ const palettes=[['#7bcfd0','#124c68'],['#bcabd9','#35486d'],['#a2dcbd','#175e70']];
+ const p=palettes[Math.floor(clamp(incoming.theme,0,2))],g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,p[0]);g.addColorStop(1,p[1]);c.fillStyle=g;c.fillRect(0,0,w,h);
+ for(let i=0;i<6;i++){c.fillStyle='#dfffff0c';c.beginPath();c.moveTo(w*i/5-50,0);c.lineTo(w*i/5+50,0);c.lineTo(w*i/5+100,h);c.lineTo(w*i/5-20,h);c.fill()}
+ const sub=SUBSTRATES.find(s=>s.id===incoming.substrate)||SUBSTRATES[0];c.fillStyle=sub.colors[0];c.fillRect(0,h*.87,w,h*.13);
+ for(let i=0;i<900;i++){c.fillStyle=sub.colors[i%sub.colors.length];c.beginPath();c.ellipse((i*137.1)%w,h*.875+((i*71.3)%(h*.125)),sub.sand?1:3+i%3,sub.sand?1:2+i%2,0,0,7);c.fill()}
+ (Array.isArray(incoming.decor)?incoming.decor:[]).slice(0,100).filter(d=>deco(d.id)).sort((a,b)=>number(a.layer)-number(b.layer)).forEach(d=>{const s=deco(d.id),im=decorImage(s),size=Math.min(w*.23,175)*clamp(d.scale,.4,2,1);c.save();c.translate(clamp(d.x,0,1)*w,clamp(d.y,0,1)*h);c.scale(d.flip?-1:1,1);if(['coral','hw3','hw9'].includes(s.id))c.transform(1,0,Math.sin(time)*.018,1,0,0);if(im.complete&&im.naturalWidth)c.drawImage(im,-size/2,-size,size,size);if(['volcano','hw4'].includes(s.id)){c.strokeStyle=s.id==='hw4'?'#c3ff99':'#deffff';for(let j=0;j<5;j++){c.beginPath();c.arc(Math.sin(time+j)*8,-size*.7-(time*20+j*16)%90,2+j%3,0,7);c.stroke()}}c.restore()});
+ (Array.isArray(incoming.fish)?incoming.fish:[]).slice(0,40).filter(f=>species(f.species)).forEach((f,i)=>{const s=species(f.species),im=fishImage(s),size=Math.min(w*.15,115)*(.55+.45*clamp(number(f.age)/s.grow,0,1)),x=(clamp(f.x,.1,.9)*w+Math.sin(time*.2+i)*w*.04),y=clamp(f.y,.12,.75)*h+Math.sin(time+i)*h*.02;c.save();c.translate(x,y);c.scale(f.dir===-1?-1:1,1);if(im.complete&&im.naturalWidth){const ih=size*im.naturalHeight/im.naturalWidth;for(let n=0;n<32;n++){const u=n/32;c.drawImage(im,n*im.naturalWidth/32,0,im.naturalWidth/32,im.naturalHeight,-size/2+n*size/32,-ih/2+Math.sin(time*6+u*3.5+i)*size*.035*(1-u)**2,size/32+.4,ih)}}c.restore()});
+ for(let i=0;i<15;i++){c.strokeStyle='#d7ffff60';c.beginPath();c.arc((i*97.3)%w,h-(time*(12+i%4*5)+i*39)%h,2+i%4,0,7);c.stroke()}
+};

@@ -123,6 +123,42 @@
     };
   }
   button.onclick = () => account(); $('closeAccount').onclick = () => modal.close();
+  window.aquariumCloud = {
+    identity: () => ready && user ? { id: user.id } : null,
+    openAccount: () => { if (!user || ready) account(); },
+    async rpc(name, args = {}) {
+      if (!client || !user || !ready || conflict) throw Error('sign_in_first');
+      const epoch = generation;
+      const { data, error } = await client.rpc(name, args);
+      if (epoch !== generation) throw Error('session_changed');
+      if (error) throw error;
+      return data;
+    },
+    async claimExpedition(id) {
+      if (!client || !user || !ready || conflict || busy) throw Error('save_busy');
+      const epoch = generation;
+      game.save(); pause(true);
+      try {
+        if (pending && !await flush()) throw Error('save_first');
+        if (epoch !== generation || !ready || conflict) throw Error('session_changed');
+        busy = true;
+        const { data, error } = await client.rpc('aquarium_expedition_claim', { p_id: id, p_revision: revision });
+        if (error) throw error;
+        if (epoch !== generation) throw Error('session_changed');
+        activate(data.payload, data.revision, false);
+        return data.reward;
+      } catch (error) {
+        if (epoch === generation && String(error.message).includes('save_conflict')) {
+          const row = await remote();
+          if (row && epoch === generation) { document.getElementById('socialDialog')?.close(); chooseConflict(row, game.snapshot()); }
+        }
+        throw error;
+      } finally {
+        busy = false;
+        if (epoch === generation && ready && !conflict) pause(false);
+      }
+    }
+  };
   window.addEventListener('aquarium-save', () => {
     if (!user || !ready || conflict) return;
     pending = true; try { writeMeta(); } catch { status('No hay espacio local. Guarda ahora en tu cuenta.'); }

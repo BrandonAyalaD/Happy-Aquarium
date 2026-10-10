@@ -41,3 +41,9 @@ En la pestaña Sustratos puedes volver a la arena natural o comprar piedras de r
 Abre Eventos activos y pulsa Participar. El evento está activo sin fecha de cierre por ahora. Las acciones nuevas de todos tus acuarios cuentan desde ese momento. Las diez misiones entregan las diez decoraciones exclusivas al Almacén; se reclaman una sola vez. Las tareas son alimentar, limpiar, recolectar monedas, comprar alimento, colocar decoraciones, entrenar, comprar peces, abrir el cofre en dos días distintos y criar. Al reclamar las diez recompensas desbloqueas Colmillo de Plata. Pulsa Recibir en este acuario cuando haya espacio; si está lleno el pez queda pendiente. El pez único puede renombrarse y entrenarse, y se conserva sin venta ni reproducción. Todo el progreso se incluye en el guardado y la exportación.
 
 Las decoraciones conservan los controles de tamaño, reflejo y capas. El caldero emite burbujas verdes; las calabazas tienen luz pulsante; la casa, el cementerio y los huesos emiten destellos fantasmales; el ánfora tiene murciélagos; el árbol y las velas del barco se balancean. El pez tiene ondulación procedural y busca la comida.
+
+## Amigos y expediciones
+
+En Amigos encontrarás tu código personal. Compártelo con tu familia para enviar y aceptar solicitudes y visitar sus acuarios. Puedes desactivar las visitas desde tu perfil.
+
+Pulsa el barril junto a la pecera, invita de uno a cuatro amigos y espera a que acepten. Con dos o más participantes el anfitrión puede zarpar. El viaje dura 15 minutos; cada jugador puede salir una vez cada 24 horas. Más participantes aumentan las posibilidades de peces y la cantidad de monedas o comida. Consulta Premios y probabilidades dentro del barril. Los peces ganados esperan en reserva si tu acuario está lleno.

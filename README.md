@@ -13,7 +13,7 @@ El juego incluye registro con correo y contraseña, sesión persistente y guarda
 Para activarlo:
 
 1. Crea un proyecto en [Supabase](https://supabase.com/dashboard). Elige el plan que prefieras; no hacen falta servicios de pago para la configuración inicial.
-2. Ejecuta `supabase/schema.sql` en el SQL Editor del proyecto.
+2. Ejecuta `supabase/schema.sql` y después `supabase/social.sql` en el SQL Editor del proyecto.
 3. En Authentication → URL Configuration configura la dirección pública del juego como Site URL y añádela a Redirect URLs. Para desarrollo, permite también `http://127.0.0.1:4173/`.
 4. Mantén activo Email/password. Para verificar los correos y habilitar recuperación de contraseñas, configura un proveedor SMTP, activa Confirm email en Supabase y cambia `passwordRecovery` a `true` en `dist/cloud-config.js`.
 5. Copia la Project URL y la **publishable key** (o la clave pública `anon`) a `dist/cloud-config.js`. Estos valores son públicos. **Nunca copies `service_role`, `sb_secret_…` ni contraseñas a este archivo o al repositorio.**
@@ -34,3 +34,18 @@ Al entrar a una cuenta nueva puedes conservar explícitamente la partida de invi
 El juego es casual: las monedas y misiones se calculan en el cliente. No se debe usar esta economía para pagos, premios de valor real o clasificaciones competitivas sin validación adicional en servidor.
 
 Consulta `LEEME.md` para las mecánicas y `ASSETS.md` para la procedencia de los diseños.
+
+## Amigos y expediciones
+
+Abre Amigos, elige un nombre y comparte tu código AF. La otra persona envía una solicitud y debes aceptarla. Solo amigos aceptados pueden visitar la última versión guardada de tus acuarios; puedes desactivar las visitas en tu perfil. Las visitas son de solo lectura.
+
+El barril junto al acuario abre Expediciones. Invita de uno a cuatro amigos; deben aceptar y el anfitrión pulsa Zarpar. Cada viaje dura 15 minutos y cada jugador puede salir una vez cada 24 horas. El reloj, participantes y sorteo se validan en Supabase. Puedes cerrar el juego y reclamar al volver. Cada participante recibe un premio independiente y no puede reclamarlo dos veces.
+
+| Participantes | Monedas | Alimento | Guppy leopardo | Pez vampiro |
+| --- | --- | --- | --- | --- |
+| 2 | 65%: 350 | 30%: 35 porciones | 4% | 1% |
+| 3 | 62%: 400 | 30%: 40 porciones | 6% | 2% |
+| 4 | 58%: 450 | 30%: 45 porciones | 8% | 4% |
+| 5 | 54%: 500 | 30%: 50 porciones | 10% | 6% |
+
+Los peces ganados quedan en reserva hasta que elijas un acuario con espacio. Las tablas sociales tienen RLS y se accede mediante funciones que comprueban la sesión y amistad. `supabase/tests/social.sql` ejecuta pruebas de integración dentro de una transacción que revierte sus datos.
