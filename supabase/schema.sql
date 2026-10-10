@@ -34,5 +34,5 @@ begin
   end if;
   return jsonb_build_object('revision', next_revision);
 end $$;
-revoke all on function public.save_aquarium(jsonb, bigint) from public;
+revoke all on function public.save_aquarium(jsonb, bigint) from public, anon, authenticated;
 grant execute on function public.save_aquarium(jsonb, bigint) to authenticated;
