@@ -49,3 +49,9 @@ El barril junto al acuario abre Expediciones. Invita de uno a cuatro amigos; deb
 | 5 | 54%: 500 | 30%: 50 porciones | 10% | 6% |
 
 Los peces ganados quedan en reserva hasta que elijas un acuario con espacio. Las tablas sociales tienen RLS y se accede mediante funciones que comprueban la sesión y amistad. `supabase/tests/social.sql` ejecuta pruebas de integración dentro de una transacción que revierte sus datos.
+
+## Espacio, nombre e iluminación
+
+Ampliar aumenta la capacidad de 8 a 24 peces en cinco tamaños. Cada ampliación añade 25% del ancho original y 35 píxeles de altura; el tamaño máximo tiene el doble de ancho. Desplaza la vista o usa las flechas Explorar para decorar todo el tanque. Las ampliaciones anteriores reciben el espacio automáticamente.
+
+En Nombre e iluminación puedes renombrar cada acuario, encender o apagar luces, elegir seis tonos o un color personalizado y ajustar su intensidad. Los cambios se guardan por acuario, también en la nube. Tus amigos ven las luces al visitarte.

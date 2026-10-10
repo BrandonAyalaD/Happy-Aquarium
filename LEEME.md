@@ -47,3 +47,9 @@ Las decoraciones conservan los controles de tamaño, reflejo y capas. El caldero
 En Amigos encontrarás tu código personal. Compártelo con tu familia para enviar y aceptar solicitudes y visitar sus acuarios. Puedes desactivar las visitas desde tu perfil.
 
 Pulsa el barril junto a la pecera, invita de uno a cuatro amigos y espera a que acepten. Con dos o más participantes el anfitrión puede zarpar. El viaje dura 15 minutos; cada jugador puede salir una vez cada 24 horas. Más participantes aumentan las posibilidades de peces y la cantidad de monedas o comida. Consulta Premios y probabilidades dentro del barril. Los peces ganados esperan en reserva si tu acuario está lleno.
+
+## Espacio, nombre e iluminación
+
+Ampliar aumenta la capacidad de 8 a 24 peces en cinco tamaños. Cada ampliación añade 25% del ancho original y 35 píxeles de altura; el tamaño máximo tiene el doble de ancho. Desplaza la vista o usa las flechas Explorar para decorar todo el tanque. Las ampliaciones anteriores reciben el espacio automáticamente.
+
+En Nombre e iluminación puedes renombrar cada acuario, encender o apagar luces, elegir seis tonos o un color personalizado y ajustar su intensidad. Los cambios se guardan por acuario, también en la nube. Tus amigos ven las luces al visitarte.

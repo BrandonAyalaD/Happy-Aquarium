@@ -88,7 +88,7 @@ begin
  if auth.uid() is null then raise exception 'authentication_required'; end if;
  if not exists(select 1 from public.aquarium_friendships where status='accepted' and ((sender=auth.uid() and recipient=p_friend) or (recipient=auth.uid() and sender=p_friend))) then raise exception 'friends_only'; end if;
  if not exists(select 1 from public.aquarium_profiles where user_id=p_friend and visits) then raise exception 'visits_disabled'; end if;
- select jsonb_build_object('name',p.name,'tanks',coalesce((select jsonb_agg(jsonb_build_object('name',t->>'name','clean',t->'clean','size',t->'size','theme',t->'theme','substrate',t->'substrate','bank',0,
+ select jsonb_build_object('name',p.name,'tanks',coalesce((select jsonb_agg(jsonb_build_object('name',t->>'name','clean',t->'clean','size',t->'size','theme',t->'theme','substrate',t->'substrate','light',t->'light','bank',0,
  'fish',coalesce(t->'fish','[]'::jsonb),'decor',coalesce(t->'decor','[]'::jsonb))) from jsonb_array_elements(s.payload->'tanks') t),'[]'::jsonb)) into result
  from public.aquarium_profiles p join public.aquarium_saves s on s.user_id=p.user_id where p.user_id=p_friend;
  if result is null then raise exception 'no_saved_aquarium'; end if;
@@ -174,3 +174,4 @@ end $$;
 revoke all on function public.aquarium_social_home(),public.aquarium_profile_update(text,boolean),public.aquarium_friend_request(text),public.aquarium_friend_action(uuid,text),public.aquarium_visit(uuid),public.aquarium_expedition_create(uuid[]),public.aquarium_expedition_action(uuid,text),public.aquarium_expedition_claim(uuid,bigint) from public,anon,authenticated;
 grant execute on function public.aquarium_social_home(),public.aquarium_profile_update(text,boolean),public.aquarium_friend_request(text),public.aquarium_friend_action(uuid,text),public.aquarium_visit(uuid),public.aquarium_expedition_create(uuid[]),public.aquarium_expedition_action(uuid,text),public.aquarium_expedition_claim(uuid,bigint) to authenticated;
 commit;
+
