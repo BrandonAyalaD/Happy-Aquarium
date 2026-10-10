@@ -1,4 +1,4 @@
-# Acuario Feliz
+# Aquamentum
 
 Juego de acuario en español con peces animados, alimentación con el mouse, decoración editable, tienda, crianza, logros y evento de Halloween.
 
@@ -65,3 +65,7 @@ El calendario usa la fecha del dispositivo; como la economía local del juego, n
 Las 10 nuevas especies están en la tienda durante todo el año (20 especies normales en total). Se compran con monedas del juego según el nivel. Incluyen tiburón, pez león, mandarín, ídolo moro, globo, koi, arowana, corydora, mariposa y caballito de mar. El nado se anima en canvas y las decoraciones navideñas tienen balanceo, destellos y luz suave.
 
 PC: rueda sobre el agua para zoom de 1× a 3×, arrastrar para desplazar la vista ampliada. Celular: pellizcar con dos dedos para acercar/alejar y mover el punto de vista; con un dedo, arrastrar para explorar. Un toque sigue seleccionando peces, alimentando o colocando una pieza según el modo. En Decorar, arrastrar una pieza la mueve; usa dos dedos para mover la cámara sin mover la pieza. Los botones Acercar y Ver todo siguen disponibles.
+
+
+## Interfaz Aquamentum
+La tienda y el almacén se abren como paneles compactos sobre el acuario mediante las cinco pestañas superiores; se cierran con ×, Escape o tocando la pestaña abierta. El ancla lateral aparece únicamente si hay un evento activo y muestra solo esa temporada. El nombre del tanque abre su personalización de nombre e iluminación. Las claves de guardado y cuentas se conservan.
