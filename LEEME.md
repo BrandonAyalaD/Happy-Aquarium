@@ -50,6 +50,6 @@ Pulsa el barril junto a la pecera, invita de uno a cuatro amigos y espera a que 
 
 ## Espacio, nombre e iluminación
 
-Ampliar aumenta la capacidad de 8 a 24 peces en cinco tamaños. Cada ampliación añade 25% del ancho original y 35 píxeles de altura; el tamaño máximo tiene el doble de ancho. Desplaza la vista o usa las flechas Explorar para decorar todo el tanque. Las ampliaciones anteriores reciben el espacio automáticamente.
+Ampliar aumenta la capacidad de 8 a 24 peces en cinco tamaños. Cada ampliación aumenta el espacio del mundo en 25% del tamaño original. La cámara muestra todo el tanque: peces y decoraciones se ven proporcionalmente más pequeños. Usa Acercar y las flechas para decorar con precisión y Ver todo para volver a la vista completa, sin barras de desplazamiento. Las ampliaciones anteriores reciben el espacio automáticamente.
 
 En Nombre e iluminación puedes renombrar cada acuario, encender o apagar luces, elegir seis tonos o un color personalizado y ajustar su intensidad. Los cambios se guardan por acuario, también en la nube. Tus amigos ven las luces al visitarte.

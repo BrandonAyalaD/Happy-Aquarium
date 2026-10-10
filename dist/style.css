@@ -19,3 +19,5 @@
 .tank:has(+ .tank-space) canvas{touch-action:pan-x}.tank.feeding canvas,.tank:has(~ .decor-editor:not([hidden])) canvas{touch-action:none}
 
 .tank-pan{display:flex;justify-content:space-between;gap:12px;margin:6px 0 12px}.tank-pan[hidden]{display:none}.tank-pan button{font-size:11px;padding:7px 12px}#dialog:has(#tankDesignForm){max-height:90dvh;overflow:auto}
+
+.tank-viewport{overflow:hidden}.tank-viewport canvas,.tank:has(+ .tank-space) canvas{touch-action:none}.tank-pan{justify-content:flex-start;flex-wrap:wrap;align-items:center}.camera-directions{display:flex;gap:5px;margin-left:auto}.camera-directions button{min-width:36px}.tank-pan button:disabled{opacity:.35}
