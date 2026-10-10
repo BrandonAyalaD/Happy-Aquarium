@@ -95,6 +95,7 @@
   }
   function message(text) { $('authMessage').textContent = text; }
   function account(mode = 'login') {
+    if (mode === 'reset' && cfg.passwordRecovery === false) return panel('<h2>Recuperación por correo pendiente</h2><p>El envío de correos todavía no está configurado. Conserva tu contraseña para volver a tu acuario.</p>');
     if (!client) return panel('<h2>Tu acuario, siempre contigo</h2><p>El juego está disponible en modo invitado. Las cuentas estarán disponibles cuando terminemos de conectar el servicio de partidas.</p>');
     if (user && ready) {
       panel('<h2>Mi cuenta</h2><p id="signedEmail"></p><p>Tu acuario se guarda automáticamente. Puedes continuar desde otro dispositivo al iniciar sesión.</p><div class="actions"><button id="saveNow">Guardar ahora</button><button id="logout">Cerrar sesión</button></div><p id="authMessage" role="status"></p>');

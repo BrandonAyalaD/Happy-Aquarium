@@ -4,18 +4,18 @@ Juego de acuario en español con peces animados, alimentación con el mouse, dec
 
 ## Jugar
 
-La página pública se publica desde `dist/` mediante GitHub Pages. Para probar localmente sirve esa carpeta con cualquier servidor HTTP; no necesita compilación.
+[Abrir el juego](https://brandonayalad.github.io/Happy-Aquarium/). Se publica desde `dist/` mediante GitHub Pages. Para probar localmente sirve esa carpeta con cualquier servidor HTTP; no necesita compilación.
 
 ## Cuentas y partidas en la nube
 
-El juego incluye registro con correo y contraseña, confirmación por correo, recuperación de contraseña, sesión persistente y guardado automático cada 15 segundos. Los invitados conservan su partida en el navegador. Cada cuenta tiene una copia local independiente y su propia partida en Supabase.
+El juego incluye registro con correo y contraseña, sesión persistente y guardado automático cada 15 segundos. Los invitados conservan su partida en el navegador. Cada cuenta tiene una copia local independiente y su propia partida en Supabase. En este proyecto el propietario autorizó el registro inmediato sin confirmar el correo para jugar en familia. La recuperación de contraseña por correo está pendiente de configurar SMTP; `passwordRecovery: false` muestra esa limitación en el juego.
 
 Para activarlo:
 
 1. Crea un proyecto en [Supabase](https://supabase.com/dashboard). Elige el plan que prefieras; no hacen falta servicios de pago para la configuración inicial.
 2. Ejecuta `supabase/schema.sql` en el SQL Editor del proyecto.
 3. En Authentication → URL Configuration configura la dirección pública del juego como Site URL y añádela a Redirect URLs. Para desarrollo, permite también `http://127.0.0.1:4173/`.
-4. Mantén activo Email/password y la confirmación de correo. Para una audiencia pública, configura un proveedor SMTP y revisa los límites de envío de correo del proyecto.
+4. Mantén activo Email/password. Para verificar los correos y habilitar recuperación de contraseñas, configura un proveedor SMTP, activa Confirm email en Supabase y cambia `passwordRecovery` a `true` en `dist/cloud-config.js`.
 5. Copia la Project URL y la **publishable key** (o la clave pública `anon`) a `dist/cloud-config.js`. Estos valores son públicos. **Nunca copies `service_role`, `sb_secret_…` ni contraseñas a este archivo o al repositorio.**
 6. Guarda los cambios y súbelos a `main`. En el repositorio, Settings → Pages → Source debe ser **GitHub Actions**. El flujo `.github/workflows/pages.yml` publica `dist/`.
 
