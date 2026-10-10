@@ -39,3 +39,13 @@ Prompt para el pez:
 
 Animaciones implementadas en canvas: luz pulsante, burbujas verdes, murciélagos, destellos fantasmales, balanceo del árbol y barco, ondulación del pez y búsqueda de comida. Las recompensas se entregan por misiones y se guardan con la partida.
 
+
+
+## Navidad y diez especies nuevas (10 de octubre de 2026)
+Veinte recortes preparados con ImageGen integrado, uno por cada diseño suministrado. Archivos finales: dist/assets/christmas-decor-1.png a christmas-decor-10.png y dist/assets/new-fish-1.png a new-fish-10.png, según el número en el archivo original. Se conserva transparencia real y se optimiza el tamaño a un máximo de 512 píxeles, conservando proporciones.
+
+Prompt de decoraciones: “Use case: background-extraction. Edit target: the supplied Christmas decoration. Extract this exact ornament for an aquarium game. Remove blue water, distant scenery, rays and all sandy floor, including background visible through openings. Preserve entire decoration, shells, pearls, seaweed, coral, gems, wood and colors unchanged. Actual transparent background, centered with tight useful framing and small margin. No floor or background shadows, no text.” El árbol recibió la misma instrucción específica para ramas y estrella.
+
+Prompt de peces: “Use case: background-extraction. Edit target: the supplied fish. Extract this exact fish for an aquarium game. Remove all blue water, rays and background, including spaces between fins and spines. Preserve entire fish anatomy, colors, texture and details. Orient fish facing RIGHT (mirror horizontally if it faces left), preserve pose. Actual transparent background, centered, tightly framed with small margin, no text, no extra subjects.”
+
+Las animaciones son procedurales, no modelos 3D ni secuencias de fotogramas independientes.

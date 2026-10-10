@@ -6,13 +6,13 @@ Juego individual de navegador inspirado en el cuidado y colección de acuarios. 
 
 Abre `dist/index.html` en un navegador moderno, o usa la vista previa local. Pulsa Alimentar para activar la botellita, mueve el mouse y haz clic dentro del agua: gastarás una porción y caerán cinco granitos. Los peces nadan hacia ellos y mejoran su alimentación al comer. Pulsa Alimentar otra vez o Escape para terminar. Limpia el agua, recolecta monedas, compra especies y completa logros para subir de nivel. Selecciona un pez para nombrarlo, entrenarlo, criar o venderlo.
 
-Incluye 10 especies, 10 decoraciones nuevas, almacén de objetos, movimiento de decoraciones, 3 paisajes, hasta 5 acuarios ampliables, 19 logros y un minijuego de entrenamiento con 7 mejoras por pez.
+Incluye 20 especies, 10 decoraciones nuevas, almacén de objetos, movimiento de decoraciones, 3 paisajes, hasta 5 acuarios ampliables, 19 logros y un minijuego de entrenamiento con 7 mejoras por pez.
 
 Para criar necesitas dos adultos de la misma especie, alimentación de al menos 60%, limpieza de al menos 60%, capacidad libre y monedas. Cada pareja espera tres minutos entre crías.
 
 Compra decoraciones y haz clic en la arena para colocarlas. El botón Decorar permite arrastrarlas; al hacer clic puedes guardarlas en el almacén.
 
-El menú ☰ ofrece alimento, cambio de paisaje, nombre del acuario y exportación/importación de partidas JSON. El guardado usa almacenamiento del navegador, sin cuentas, sincronización ni funciones sociales. Exporta antes de cambiar de navegador o borrar sus datos.
+El menú ☰ ofrece alimento, cambio de paisaje, nombre del acuario y exportación/importación de partidas JSON. El guardado usa almacenamiento del navegador, con cuentas, sincronización en la nube y funciones sociales al configurar Supabase. Exporta antes de cambiar de navegador o borrar sus datos.
 
 Al regresar se simulan hasta ocho horas. Los peces no mueren por abandono. Las tipografías web son opcionales y tienen alternativas locales.
 
@@ -53,3 +53,13 @@ Pulsa el barril junto a la pecera, invita de uno a cuatro amigos y espera a que 
 Ampliar aumenta la capacidad de 8 a 24 peces en cinco tamaños. Cada ampliación aumenta el espacio del mundo en 25% del tamaño original. La cámara muestra todo el tanque: peces y decoraciones se ven proporcionalmente más pequeños. Usa Acercar y las flechas para decorar con precisión y Ver todo para volver a la vista completa, sin barras de desplazamiento. Las ampliaciones anteriores reciben el espacio automáticamente.
 
 En Nombre e iluminación puedes renombrar cada acuario, encender o apagar luces, elegir seis tonos o un color personalizado y ajustar su intensidad. Los cambios se guardan por acuario, también en la nube. Tus amigos ven las luces al visitarte.
+
+
+## Temporadas y navegación del acuario
+Halloween está disponible del 1 al 31 de octubre y Navidad del 1 al 31 de diciembre, inclusive, cada año según America/Mexico_City. Fuera de estas fechas no se puede participar ni reclamar premios nuevos. Los premios obtenidos permanecen en la partida; el pez de Halloween ya desbloqueado puede recibirse fuera de temporada. Cada temporada inicia sus propias misiones al participar, sin contar acciones anteriores, y reinicia misiones al participar en un año nuevo. Navidad da diez decoraciones exclusivas.
+
+El calendario usa la fecha del dispositivo; como la economía local del juego, no es una protección contra partidas manipuladas o cambios de reloj.
+
+Las 10 nuevas especies están en la tienda durante todo el año (20 especies normales en total). Se compran con monedas del juego según el nivel. Incluyen tiburón, pez león, mandarín, ídolo moro, globo, koi, arowana, corydora, mariposa y caballito de mar. El nado se anima en canvas y las decoraciones navideñas tienen balanceo, destellos y luz suave.
+
+PC: rueda sobre el agua para zoom de 1× a 3×, arrastrar para desplazar la vista ampliada. Celular: pellizcar con dos dedos para acercar/alejar y mover el punto de vista; con un dedo, arrastrar para explorar. Un toque sigue seleccionando peces, alimentando o colocando una pieza según el modo. En Decorar, arrastrar una pieza la mueve; usa dos dedos para mover la cámara sin mover la pieza. Los botones Acercar y Ver todo siguen disponibles.
