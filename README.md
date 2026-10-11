@@ -69,3 +69,6 @@ PC: rueda sobre el agua para zoom de 1× a 3×, arrastrar para desplazar la vist
 
 ## Interfaz Aquamentum
 La tienda y el almacén se abren como paneles compactos sobre el acuario mediante las cinco pestañas superiores; se cierran con ×, Escape o tocando la pestaña abierta. El ancla lateral aparece únicamente si hay un evento activo y muestra solo esa temporada. El nombre del tanque abre su personalización de nombre e iluminación. Las claves de guardado y cuentas se conservan.
+
+## Guías del acuario
+Aydon y Ruria presentan un recorrido inicial, ayuda contextual, temporadas activas y explicaciones de las especies. El recorrido puede omitirse y repetirse desde Guías. El estado del recorrido se guarda con la partida de cada cuenta. La animación respeta la preferencia de movimiento reducido. Colmillo de Plata representa la payara Hydrolycus scomberoides.

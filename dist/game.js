@@ -122,7 +122,7 @@ function showSpeciesCard(f){
  const s=species(f.species),d=SPECIES_GUIDE[f.species];if(!d)return;
  $('speciesCard').hidden=false;$('speciesPortrait').src=FISH_ASSETS[s.id]?.src||'assets/halloween-fish.png';$('speciesPortrait').alt=s.name;
  $('speciesCommon').textContent=d.common;$('speciesScientific').textContent=d.scientific;$('speciesOrigin').textContent=d.origin;$('speciesHabitat').textContent=d.habitat;$('speciesFact').textContent=d.fact;
- $('speciesSource').hidden=!d.source;if(d.source){$('speciesSource').href=d.source;$('speciesSource').textContent='Consultar fuente de la especie ↗'}
+ window.dispatchEvent(new CustomEvent('aquarium-species',{detail:{id:f.species,fact:d.fact}}));$('speciesSource').hidden=!d.source;if(d.source){$('speciesSource').href=d.source;$('speciesSource').textContent='Consultar fuente de la especie ↗'}
  $('closeSpecies').focus();
 }
 function leaveObservation(){observationMode(false);if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
@@ -200,3 +200,5 @@ window.aquariumGame.drawVisit=(surface,incoming,time)=>{
  for(let i=0;i<15;i++){c.strokeStyle='#d7ffff60';c.beginPath();c.arc((i*97.3)%w,h-(time*(12+i%4*5)+i*39)%h,2+i%4,0,7);c.stroke()}
  paintTankLight(c,w,h,incoming,time);
 };
+
+window.aquariumGame.guidance={ready:()=>!gamePaused,key:()=>storageKey,observing:()=>observing,read:()=>JSON.parse(JSON.stringify(state.guidance||{})),isNew:()=>state.xp===0&&(state.stats.fed||0)===0&&(state.stats.bought||0)===0,mark:(key)=>{if(gamePaused)return;state.guidance=state.guidance&&typeof state.guidance==='object'?state.guidance:{};state.guidance[key]=true;save()},season:()=>['halloween','christmas'].find(id=>seasonOpen(id))||null,year:()=>seasonDate().year};

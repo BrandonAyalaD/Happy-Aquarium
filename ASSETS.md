@@ -49,3 +49,5 @@ Prompt de decoraciones: “Use case: background-extraction. Edit target: the sup
 Prompt de peces: “Use case: background-extraction. Edit target: the supplied fish. Extract this exact fish for an aquarium game. Remove all blue water, rays and background, including spaces between fins and spines. Preserve entire fish anatomy, colors, texture and details. Orient fish facing RIGHT (mirror horizontally if it faces left), preserve pose. Actual transparent background, centered, tightly framed with small margin, no text, no extra subjects.”
 
 Las animaciones son procedurales, no modelos 3D ni secuencias de fotogramas independientes.
+
+Aydon y Ruria: retratos preparados a partir de los diseños proporcionados por el usuario. Dos expresiones por personaje para la animación de diálogo, en assets/guides.png.
