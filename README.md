@@ -72,3 +72,6 @@ La tienda y el almacén se abren como paneles compactos sobre el acuario mediant
 
 ## Guías del acuario
 Aydon y Ruria presentan un recorrido inicial, ayuda contextual, temporadas activas y explicaciones de las especies. El recorrido puede omitirse y repetirse desde Guías. El estado del recorrido se guarda con la partida de cada cuenta. La animación respeta la preferencia de movimiento reducido. Colmillo de Plata representa la payara Hydrolycus scomberoides.
+
+## Enamorados 2027 y colección ampliada
+30 peces de tienda, con ilustraciones, animación y fichas de referencia. Corazones bajo el mar se activa exclusivamente del 1 al 28 de febrero de 2027 en horario de Ciudad de México. Diez misiones desbloquean diez decoraciones; el progreso empieza al participar. Antes y después, el evento no se muestra; los premios ganados se conservan.

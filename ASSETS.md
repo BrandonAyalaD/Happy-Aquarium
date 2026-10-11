@@ -51,3 +51,5 @@ Prompt de peces: “Use case: background-extraction. Edit target: the supplied f
 Las animaciones son procedurales, no modelos 3D ni secuencias de fotogramas independientes.
 
 Aydon y Ruria: retratos preparados a partir de los diseños proporcionados por el usuario. Dos expresiones por personaje para la animación de diálogo, en assets/guides.png.
+
+Diez peces extra y diez decoraciones de enamorados preparados con transparencia a partir de las imágenes del usuario del 11 de octubre de 2026. Archivos extra-fish-1..10.png y valentine-decor-1..10.png. Las imágenes son interpretaciones artísticas; las fichas usan especies de referencia con enlaces a FishBase.
