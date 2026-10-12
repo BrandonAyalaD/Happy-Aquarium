@@ -77,3 +77,5 @@ Aydon y Ruria presentan un recorrido inicial, ayuda contextual, temporadas activ
 30 peces de tienda, con ilustraciones, animación y fichas de referencia. Corazones bajo el mar se activa exclusivamente del 1 al 28 de febrero de 2027 en horario de Ciudad de México. Diez misiones desbloquean diez decoraciones; el progreso empieza al participar. Antes y después, el evento no se muestra; los premios ganados se conservan.
 
 Personalización: pulsa el nombre del acuario para elegir entre seis fondos gratuitos, revisar la vista previa junto con la luz y guardar la selección por pecera. Los fondos también aparecen en las visitas y en el modo de admirar.
+
+Los seis fondos usan los paisajes del usuario en WebP, con recorte proporcional para celular y escritorio, miniaturas y vista previa con luz y sustrato.
