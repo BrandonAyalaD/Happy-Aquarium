@@ -55,3 +55,5 @@ Aydon y Ruria: retratos preparados a partir de los diseños proporcionados por e
 Diez peces extra y diez decoraciones de enamorados preparados con transparencia a partir de las imágenes del usuario del 11 de octubre de 2026. Archivos extra-fish-1..10.png y valentine-decor-1..10.png. Las imágenes son interpretaciones artísticas; las fichas usan especies de referencia con enlaces a FishBase.
 
 Fondos del acuario: seis paisajes proporcionados por el usuario el 11 de octubre de 2026, optimizados como background-0..5.webp. Se mantiene su proporción con recorte central; la arena natural conserva el suelo de la imagen y otros sustratos usan una transición suave.
+
+Fondo Agua tranquila: imagen Tranquil Underwater Light Rays (1).png proporcionada por el usuario, optimizada como background-6.webp. Rayos y reflejos animados con Canvas; el paisaje permanece estable.

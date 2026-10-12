@@ -79,3 +79,5 @@ Aydon y Ruria presentan un recorrido inicial, ayuda contextual, temporadas activ
 Personalización: pulsa el nombre del acuario para elegir entre seis fondos gratuitos, revisar la vista previa junto con la luz y guardar la selección por pecera. Los fondos también aparecen en las visitas y en el modo de admirar.
 
 Los seis fondos usan los paisajes del usuario en WebP, con recorte proporcional para celular y escritorio, miniaturas y vista previa con luz y sustrato.
+
+Los acuarios nuevos comienzan con Agua tranquila. Los seis paisajes anteriores siguen disponibles y las selecciones existentes se conservan. El control Animar luces y reflejos del agua se guarda por acuario y respeta prefers-reduced-motion, también en la vista previa.
